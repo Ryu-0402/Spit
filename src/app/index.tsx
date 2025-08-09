@@ -10,7 +10,7 @@ export default function Index() {
     const go = (hasSession: boolean) => {
       if (navigating.current) return;
       navigating.current = true;
-      router.replace(hasSession ? "/protected/free" : "/login");
+      router.replace(hasSession ? "/protected/freeMatchScreen" : "/login");
       // 少し待ってから解除（連続イベント対策）
       setTimeout(() => (navigating.current = false), 300);
     };
